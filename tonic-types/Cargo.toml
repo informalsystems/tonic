@@ -1,22 +1,25 @@
 [package]
-name = "tonic-types"
+name = "informalsystems-tonic-types"
 version = "0.3.0"
 authors = ["Lucio Franco <luciofranco14@gmail.com>"]
 edition = "2018"
 license = "MIT"
 documentation = "https://docs.rs/tonic-types/0.3.0/tonic-types/"
-repository = "https://github.com/hyperium/tonic"
-homepage = "https://github.com/hyperium/tonic"
+repository = "https://github.com/informalsystems/tonic"
+homepage = "https://github.com/informalsystems/tonic"
 description = """
-A collection of useful protobuf types that can be used with `tonic`.
+Release based on a fork until upstream is updated.
 """
 readme = "../README.md"
 categories = ["web-programming", "network-programming", "asynchronous"]
 keywords = ["rpc", "grpc", "protobuf"]
 
+[lib]
+doctest = false
+
 [dependencies]
-prost = "0.8"
-prost-types = "0.8"
+prost = { package = "informalsystems-prost", version = "0.8.1" }
+prost-types = { package = "informalsystems-prost-types", version = "0.8.1" }
 
 [build-dependencies]
-prost-build = "0.8"
+prost-build = { package = "informalsystems-prost-build", version = "0.8.1" }

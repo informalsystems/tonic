@@ -171,8 +171,8 @@ name = "grpc-web-client"
 path = "src/grpc-web/client.rs"
 
 [dependencies]
-tonic = { path = "../tonic", features = ["tls", "compression"] }
-prost = "0.8"
+tonic = { package = "informalsystems-tonic", path = "../tonic", features = ["tls", "compression"] }
+prost = { package = "informalsystems-prost", version = "0.8.1" }
 tokio = { version = "1.0", features = ["rt-multi-thread", "time", "fs", "macros", "net"] }
 tokio-stream = { version =  "0.1", features = ["net"] }
 async-stream = "0.3"
@@ -188,7 +188,7 @@ tracing-subscriber = { version = "0.2", features = ["tracing-log"] }
 tracing-attributes = "0.1"
 tracing-futures = "0.2"
 # Required for wellknown types
-prost-types = "0.8"
+prost-types = { package = "informalsystems-prost-types", version = "0.8.1" }
 # Hyper example
 hyper = { version = "0.14", features = ["full"] }
 warp = "0.3"
@@ -196,13 +196,13 @@ http = "0.2"
 http-body = "0.4.2"
 pin-project = "1.0"
 # Health example
-tonic-health = { path = "../tonic-health" }
+tonic-health = { package = "informalsystems-tonic-health", path = "../tonic-health" }
 # Reflection example
-tonic-reflection = { path = "../tonic-reflection" }
+tonic-reflection = { package = "informalsystems-tonic-reflection", path = "../tonic-reflection" }
 listenfd = "0.3"
 # grpc-web example
-tonic-web = { path = "../tonic-web" }
+tonic-web = { package = "informalsystems-tonic-web", path = "../tonic-web" }
 bytes = "1"
 
 [build-dependencies]
-tonic-build = { path = "../tonic-build", features = ["prost", "compression"] }
+tonic-build = { package = "informalsystems-tonic-build", path = "../tonic-build", features = ["prost", "compression"] }

@@ -6,9 +6,9 @@ publish = false
 edition = "2018"
 
 [dependencies]
-tonic = { path = "../../../tonic" }
-tonic-web = { path = "../../../tonic-web" }
-prost = "0.8"
+tonic = { package = "informalsystems-tonic", path = "../../../tonic" }
+tonic-web = { package = "informalsystems-tonic-web", path = "../../../tonic-web" }
+prost = { package = "informalsystems-prost", version = "0.8.1" }
 tokio = { version = "1", features = ["macros", "rt", "net"] }
 base64 = "0.13"
 bytes = "1.0"
@@ -16,4 +16,4 @@ tokio-stream = { version = "0.1", features = ["net"] }
 hyper = "0.14"
 
 [build-dependencies]
-tonic-build = { path = "../../../tonic-build" }
+tonic-build = { package = "informalsystems-tonic-build", path = "../../../tonic-build" }

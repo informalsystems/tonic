@@ -12,8 +12,8 @@ license = "MIT"
 doctest = false
 
 [dependencies]
-tonic = { path = "../../tonic" }
-prost = "0.8"
+tonic = { package = "informalsystems-tonic", path = "../../tonic" }
+prost = { package = "informalsystems-prost", version = "0.8.1" }
 
 [build-dependencies]
-tonic-build = { path = "../../tonic-build" }
+tonic-build = { package = "informalsystems-tonic-build", path = "../../tonic-build" }
