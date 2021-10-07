@@ -9,8 +9,8 @@ license = "MIT"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-tonic = { path = "../../tonic" }
-prost = "0.8"
+tonic = { package = "informalsystems-tonic", path = "../../tonic" }
+prost = { package = "informalsystems-prost", version = "0.8.1" }
 futures-util = "0.3"
 bytes = "1.0"
 
@@ -26,4 +26,4 @@ http = "0.2"
 tracing-subscriber = "0.2"
 
 [build-dependencies]
-tonic-build = { path = "../../tonic-build" }
+tonic-build = { package = "informalsystems-tonic-build", path = "../../tonic-build" }

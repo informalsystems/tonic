@@ -1,22 +1,24 @@
 [package]
-name = "tonic-build"
+name = "informalsystems-tonic-build"
 version = "0.5.2"
 authors = ["Lucio Franco <luciofranco14@gmail.com>"]
 edition = "2018"
 license = "MIT"
 documentation = "https://docs.rs/tonic-build/0.5.2/tonic_build/"
-repository = "https://github.com/hyperium/tonic"
-homepage = "https://github.com/hyperium/tonic"
+repository = "https://github.com/informalsystems/tonic"
+homepage = "https://github.com/informalsystems/tonic"
 description = """
-Codegen module of `tonic` gRPC implementation.
+Release based on a fork until upstream is updated.
 """
 readme = "README.md"
 categories = ["network-programming", "asynchronous"]
 keywords = ["rpc", "grpc", "async", "codegen", "protobuf"]
 
+[lib]
+doctest = false
 
 [dependencies]
-prost-build = { version = "0.8", optional = true }
+prost-build = { package = "informalsystems-prost-build", version = "0.8.1", optional = true }
 syn = "1.0"
 quote = "1.0"
 proc-macro2 = "1.0"

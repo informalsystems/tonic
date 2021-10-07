@@ -1,18 +1,21 @@
 [package]
-name = "tonic-health"
+name = "informalsystems-tonic-health"
 version = "0.4.1"
 authors = ["James Nugent <james@jen20.com>"]
 edition = "2018"
 license = "MIT"
-repository = "https://github.com/hyperium/tonic"
-homepage = "https://github.com/hyperium/tonic"
+repository = "https://github.com/informalsystems/tonic"
+homepage = "https://github.com/informalsystems/tonic"
 documentation = "https://docs.rs/tonic-health/0.4.0/tonic-health/"
 description = """
-Health Checking module of `tonic` gRPC implementation.
+Release based on a fork until upstream is updated.
 """
 readme = "README.md"
 categories = ["network-programming", "asynchronous"]
 keywords = ["rpc", "grpc", "async", "healthcheck"]
+
+[lib]
+doctest = false
 
 [features]
 default = ["transport"]
@@ -20,9 +23,9 @@ transport = ["tonic/transport"]
 
 [dependencies]
 tokio = { version = "1.0", features = ["sync"] }
-tonic = { version = "0.5", path = "../tonic", features = ["codegen", "prost"] }
+tonic = { package = "informalsystems-tonic", version = "0.5", path = "../tonic", features = ["codegen", "prost"] }
 bytes = "1.0"
-prost = "0.8"
+prost = { package = "informalsystems-prost", version = "0.8.1" }
 tokio-stream = "0.1"
 async-stream = "0.3"
 
@@ -30,4 +33,4 @@ async-stream = "0.3"
 tokio = { version = "1.0", features = ["rt-multi-thread", "macros"]}
 
 [build-dependencies]
-tonic-build = { version = "0.5", path = "../tonic-build" }
+tonic-build = { package = "informalsystems-tonic-build", version = "0.5", path = "../tonic-build" }

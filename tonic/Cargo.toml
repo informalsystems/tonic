@@ -1,5 +1,5 @@
 [package]
-name = "tonic"
+name = "informalsystems-tonic"
 # When releasing to crates.io:
 # - Remove path dependencies
 # - Update html_root_url.
@@ -13,14 +13,17 @@ authors = ["Lucio Franco <luciofranco14@gmail.com>"]
 edition = "2018"
 license = "MIT"
 documentation = "https://docs.rs/tonic/0.5.2/tonic/"
-repository = "https://github.com/hyperium/tonic"
-homepage = "https://github.com/hyperium/tonic"
+repository = "https://github.com/informalsystems/tonic"
+homepage = "https://github.com/informalsystems/tonic"
 description = """
-A gRPC over HTTP/2 implementation focused on high performance, interoperability, and flexibility.
+Release based on a fork until upstream is updated.
 """
 readme = "../README.md"
 categories = ["web-programming", "network-programming", "asynchronous"]
 keywords = ["rpc", "grpc", "async", "futures", "protobuf"]
+
+[lib]
+doctest = false
 
 [features]
 default = ["transport", "codegen", "prost"]
@@ -63,8 +66,8 @@ http-body = "0.4.2"
 pin-project = "1.0"
 
 # prost
-prost1 = { package = "prost", version = "0.8", optional = true }
-prost-derive = { version = "0.8", optional = true }
+prost1 = { package = "informalsystems-prost", version = "0.8.1", optional = true }
+prost-derive = { package = "informalsystems-prost-derive", version = "0.8.1", optional = true }
 
 # codegen
 async-trait = { version = "0.1.13", optional = true }
@@ -87,6 +90,7 @@ webpki-roots = { version = "0.21.1", optional = true }
 flate2 = { version = "1.0", optional = true }
 
 [dev-dependencies]
+tonic = { package = "informalsystems-tonic", path = "." }
 tokio = { version = "1.0", features = ["rt", "macros"] }
 static_assertions = "1.0"
 rand = "0.8"
