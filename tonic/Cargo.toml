@@ -1,5 +1,5 @@
 [package]
-name = "tonic"
+name = "informalsystems-tonic"
 # When releasing to crates.io:
 # - Remove path dependencies
 # - Update html_root_url.
@@ -63,8 +63,8 @@ http-body = "0.4.2"
 pin-project = "1.0"
 
 # prost
-prost1 = { package = "prost", version = "0.8", optional = true }
-prost-derive = { version = "0.8", optional = true }
+prost1 = { package = "informalsystems-prost", version = "0.8", optional = true }
+prost-derive = { package = "informalsystems-prost-derive", version = "0.8", optional = true }
 
 # codegen
 async-trait = { version = "0.1.13", optional = true }

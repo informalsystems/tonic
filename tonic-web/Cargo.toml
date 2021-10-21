@@ -1,5 +1,5 @@
 [package]
-name = "tonic-web"
+name = "informalsystems-tonic-web"
 version = "0.1.0"
 authors = ["Juan Alvarez <alce@me.com>"]
 edition = "2018"
@@ -15,7 +15,7 @@ categories = ["network-programming", "asynchronous"]
 keywords = ["rpc", "grpc", "grpc-web"]
 
 [dependencies]
-tonic = { version = "0.5", path = "../tonic", default-features = false, features = ["transport"] }
+tonic = { package = "informalsystems-tonic", version = "0.5", path = "../tonic", default-features = false, features = ["transport"] }
 http = "0.2"
 base64 = "0.13"
 futures-core = "0.3"
@@ -28,4 +28,4 @@ pin-project = "1"
 
 [dev-dependencies]
 tokio = { version = "1", features = ["macros", "rt"] }
-tonic = { path = "../tonic", default-features = false, features = ["transport", "tls"] }
+tonic = { package = "informalsystems-tonic", path = "../tonic", default-features = false, features = ["transport", "tls"] }

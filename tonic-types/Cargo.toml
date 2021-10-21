@@ -15,8 +15,8 @@ categories = ["web-programming", "network-programming", "asynchronous"]
 keywords = ["rpc", "grpc", "protobuf"]
 
 [dependencies]
-prost = "0.8"
-prost-types = "0.8"
+prost = { package = "informalsystems-prost", version = "0.8" }
+prost-types = { package = "informalsystems-prost-types", version = "0.8" }
 
 [build-dependencies]
-prost-build = "0.8"
+prost-build = { package = "informalsystems-prost-build", version = "0.8" }
