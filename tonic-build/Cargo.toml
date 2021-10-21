@@ -8,7 +8,7 @@ documentation = "https://docs.rs/tonic-build/0.5.2/tonic_build/"
 repository = "https://github.com/hyperium/tonic"
 homepage = "https://github.com/hyperium/tonic"
 description = """
-Codegen module of `tonic` gRPC implementation.
+Temporary fork for internal use. Use the `tonic-build` crate instead.
 """
 readme = "README.md"
 categories = ["network-programming", "asynchronous"]

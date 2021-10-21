@@ -13,10 +13,10 @@ authors = ["Lucio Franco <luciofranco14@gmail.com>"]
 edition = "2018"
 license = "MIT"
 documentation = "https://docs.rs/tonic/0.5.2/tonic/"
-repository = "https://github.com/hyperium/tonic"
+repository = "https://github.com/informalsystems/tonic"
 homepage = "https://github.com/hyperium/tonic"
 description = """
-A gRPC over HTTP/2 implementation focused on high performance, interoperability, and flexibility.
+Temporary fork for internal use. Use the `tonic` crate instead.
 """
 readme = "../README.md"
 categories = ["web-programming", "network-programming", "asynchronous"]

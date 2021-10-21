@@ -10,7 +10,7 @@ license = "MIT"
 repository = "https://github.com/hyperium/tonic"
 homepage = "https://github.com/hyperium/tonic"
 description = """
-Server Reflection module of `tonic` gRPC implementation.
+Temporary fork for internal use. Use the `tonic-reflection` crate instead.
 """
 readme = "README.md"
 categories = ["network-programming", "asynchronous"]

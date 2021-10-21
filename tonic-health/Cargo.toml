@@ -8,7 +8,7 @@ repository = "https://github.com/hyperium/tonic"
 homepage = "https://github.com/hyperium/tonic"
 documentation = "https://docs.rs/tonic-health/0.4.0/tonic-health/"
 description = """
-Health Checking module of `tonic` gRPC implementation.
+Temporary fork for internal use. Use the `tonic-health` crate instead.
 """
 readme = "README.md"
 categories = ["network-programming", "asynchronous"]

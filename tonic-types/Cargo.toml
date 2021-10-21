@@ -8,7 +8,7 @@ documentation = "https://docs.rs/tonic-types/0.3.0/tonic-types/"
 repository = "https://github.com/hyperium/tonic"
 homepage = "https://github.com/hyperium/tonic"
 description = """
-A collection of useful protobuf types that can be used with `tonic`.
+Temporary fork for internal use. Use the `tonic-types` crate instead.
 """
 readme = "../README.md"
 categories = ["web-programming", "network-programming", "asynchronous"]
